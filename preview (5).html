@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Areesha ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#ff5f8f,#ff8fab,#ffc2d1,#ffdbe5);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    color:white;
+    box-shadow:0 0 30px rgba(255,255,255,0.25);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d88;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float linear forwards;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>❤️ For Areesha ❤️</h1>
+
+    <p>
+        I made something small for someone who means a lot to me. ✨
+        <br><br>
+        Click below and let me show you what's in my heart...
+    </p>
+
+    <button onclick="openGift()">Open My Heart 💌</button>
+</div>
+
+<script>
+
+function openGift(){
+
+document.body.innerHTML = `
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff5f8f,#ff9eb5,#ffd6df);
+font-family:'Segoe UI',sans-serif;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+color:white;
+padding:40px;
+max-width:850px;
+}
+
+.teddy{
+font-size:130px;
+animation:bounce 2.5s infinite;
+}
+
+@keyframes bounce{
+50%{transform:translateY(-15px);}
+}
+
+h1{
+font-size:3.5rem;
+margin:10px 0;
+text-shadow:0 0 15px white;
+}
+
+.message{
+font-size:1.3rem;
+line-height:2;
+margin-top:20px;
+}
+
+.final{
+font-size:2rem;
+font-weight:bold;
+margin-top:25px;
+}
+
+.extraBtn{
+margin-top:25px;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+color:#ff4d88;
+}
+
+#extra{
+display:none;
+margin-top:20px;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:rise 6s linear forwards;
+}
+
+@keyframes rise{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+</style>
+
+<div class="container">
+
+<div class="teddy">🧸❤️</div>
+
+<h1>Dear Areesha</h1>
+
+<div class="message">
+
+Out of all the people in this world,
+I'm grateful that life brought you into mine. ✨
+
+<br><br>
+
+You make ordinary moments feel special,
+and your smile has a way of making everything better. 🌹
+
+<br><br>
+
+If I could give you one thing,
+it would be the ability to see yourself through my eyes,
+so you could understand how wonderful you truly are.
+
+<br><br>
+
+Every message from you makes me smile.
+Every memory with you becomes one I never want to lose.
+
+</div>
+
+<div class="final">
+❤️ I LOVE YOU AREESHA ❤️
+</div>
+
+<button class="extraBtn" onclick="document.getElementById('extra').style.display='block'">
+One More Thing... ✨
+</button>
+
+<div id="extra">
+No matter how many words I write,
+they will never be enough to describe
+how much you mean to me. ❤️
+
+<br><br>
+
+Thank you for being part of my life.
+🌹 Forever my favorite hello and my hardest goodbye. 🌹
+</div>
+
+</div>
+
+`;
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML=["❤️","💕","💖","💗"][Math.floor(Math.random()*4)];
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(Math.random()*25+15)+"px";
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),6000);
+},250);
+
+}
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(Math.random()*20+15)+"px";
+h.style.animationDuration=(Math.random()*3+4)+"s";
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),7000);
+},300);
+
+</script>
+
+</body>
+</html>
